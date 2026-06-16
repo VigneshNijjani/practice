@@ -1,11 +1,5 @@
 from functools import reduce
 
-
-
-
-
-
-
 while True:
     print("1.add")
     print("2.subtract")
