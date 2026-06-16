@@ -1,3 +1,14 @@
+# Objective: Create a calculator that supports dynamic operations.
+# Input:
+# ● Operation type (add, multiply, factorial)
+# ● Variable number of inputs
+# Expected Output:
+# ● Correct calculation result
+# Mandatory Requirements:
+# ● Use *args for arithmetic operations
+# ● Use recursion for factorial
+# ● Use lambda functions
+
 from functools import reduce
 
 while True:
@@ -34,6 +45,7 @@ while True:
 
     elif choice==5:
         a=int(input("enter a single number :"))
+        
         def factorial(number,result=1):
             if number==1:
                 return result
