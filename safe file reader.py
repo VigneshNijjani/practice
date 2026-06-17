@@ -23,7 +23,7 @@ while True:
         file=input("enter file name u want to read : ")
         try:
             with open(file,"r") as f:
-                f.seek(0)
+                
                 data=f.read()
             print(data)
         except FileNotFoundError:
@@ -33,7 +33,7 @@ while True:
    
 
     elif choice==3:
-        file=input("enter file name tou want to write into :")
+        file=input("enter file name you want to write into :")
         try:
             data=input("enter the data u want to add into file : ")
             with open(file,"r+") as f:
