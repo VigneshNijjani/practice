@@ -18,27 +18,30 @@ while True:
                 print("file created sucessfully")
         except FileExistsError:
             print("file already exist")
-
+        
     elif choice==2:
         file=input("enter file name u want to read : ")
         try:
-            with open(file,"r"):
-                data=file.read()
+            with open(file,"r") as f:
+                f.seek(0)
+                data=f.read()
             print(data)
         except FileNotFoundError:
             print("file does not exist")
+        finally:
+            print("read operation performed")
    
 
     elif choice==3:
         file=input("enter file name tou want to write into :")
         try:
             data=input("enter the data u want to add into file : ")
-            with open(file,"r+"):
-                file.seek(0, 2)
-                file.write("data")
+            with open(file,"r+") as f:
+                f.seek(0, 2)
+                f.write(data)
         except FileNotFoundError:
             print("file does not exist")
-            
+
     elif choice==4:
         break
     else:
