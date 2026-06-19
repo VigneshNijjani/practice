@@ -64,3 +64,24 @@
 #         print("invalid choice")
 
 
+#slicing
+l=[1,2,3,4,5,6]
+t=(6,5,4,3,2,1)
+#printing everthing using slicing
+a=l[::]
+b=t[::]
+print(a)
+print(b)
+print()
+#printing reverse
+c=l[::-1]
+d=t[::-1]
+print(c)
+#rotate k steps
+k=3
+print(l[k:]+l[:-k])
+print(t[k:]+t[:-k])
+
+
+
+
