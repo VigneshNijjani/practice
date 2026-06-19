@@ -77,11 +77,34 @@ print()
 c=l[::-1]
 d=t[::-1]
 print(c)
+print(d)
 #rotate k steps
 k=3
-print(l[k:]+l[:-k])
-print(t[k:]+t[:-k])
+print(l[k:]+l[:k])
+print(t[k:]+t[:k])
 
+#scoping
 
+x=100
+
+def outer():
+    x=50
+    print("outer : ",x)
+
+    def middle():
+        nonlocal x
+        x+=50
+        print("middle : ",x)
+
+        def inner():
+            nonlocal x
+            x+=50
+            print("inner : ",x)
+        inner()
+    
+    middle()
+
+outer()
+print("global",x)
 
 
